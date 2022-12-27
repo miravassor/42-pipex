@@ -1,4 +1,4 @@
-# Pipex-42
+# 42 pipex
 *2022 - grade : 125/100*
 
 ## Tips
