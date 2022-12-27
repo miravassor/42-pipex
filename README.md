@@ -2,11 +2,12 @@
 *2022 - grade : 125/100*
 
 ## Tips
-* use `bash -posix` command to enter the expected bash shell to mirror behaviour.
-* [great stackoverflow post on dup2 and close functions](https://stackoverflow.com/a/30714995)
+* use `bash -posix` command to enter the expected bash version to mirror behaviour from.
+* [great stackoverflow post](https://stackoverflow.com/a/30714995) on dup2 and close functions.
 * use the `valgrind --track-fds=yes` command to keep track of opened fds at the program end (the 3 first ones should remained open).
 * the `echo$?` command gives you the last returned number from your last command, handy to test and understand bash return code (not mandatory).
 * Bonus : I upgraded the function *get_next_line* to take the string limiter in addition of the fd it reads from. This way everything can be clean properly when the limiter is read.
+* This code isn't the shortest or most optimized code I've seen for this project but it's what I've come up with. Make your own and see how it can be improved. :)
 
 ## New allowed functions
 perror : the perror() function produces a message on standard error describing the last error encountered during a call to a system or library function.
