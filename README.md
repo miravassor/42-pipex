@@ -2,11 +2,11 @@
 *2022 - grade : 125/100*
 
 ## Tips
-* use `bash -posix` command to enter bash shell in a terminal
-* [great post on dup2 and close](https://stackoverflow.com/a/30714995)
-* check the closing of fds using the `valgrind --track-fds=yes` command
-* the `echo$?` command gives you the last returned number from your last command, handy to test and understand bash return code (not mandatory)
-* Bonus : I upgraded the function *get_next_line* to take the limiter as well as the fd it reads from. This way everything can be clean when the limiter is read.
+* use `bash -posix` command to enter the expected bash shell to mirror behaviour.
+* [great stackoverflow post on dup2 and close functions](https://stackoverflow.com/a/30714995)
+* use the `valgrind --track-fds=yes` command to keep track of opened fds at the program end (the 3 first ones should remained open).
+* the `echo$?` command gives you the last returned number from your last command, handy to test and understand bash return code (not mandatory).
+* Bonus : I upgraded the function *get_next_line* to take the string limiter in addition of the fd it reads from. This way everything can be clean properly when the limiter is read.
 
 ## New allowed functions
 perror : the perror() function produces a message on standard error describing the last error encountered during a call to a system or library function.
@@ -41,6 +41,11 @@ pipe : pipe() creates a pipe, a unidirectional data channel that can be used for
 ```
 int pipe(int pipefd[2]);
 ```
+
 unlink : unlink - call the unlink function to remove the specified file
+
 wait : await process completion
+
 waitpid : All of these system calls are used to wait for state changes in a child of the calling process, and obtain information about the child whose state has changed.
+
+Good luck !
