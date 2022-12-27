@@ -10,11 +10,11 @@
 ## Code
 * This code isn't the shortest or most optimized code I've seen for this project but it's what I've come up with. Make your own and see how it can be improved. :)
 * Bonus : I upgraded the function *get_next_line* to take the string limiter in addition of the fd it reads from. This way everything can be clean properly when the limiter is read.
-* The ```arg_chk``` function isn't pretty but it does a lot of checking for 24 lines ¯\_(ツ)_/¯.
-* The pied_piper function creates all the pipes needed for the program to perform at once. I borrowed this idea from another student on github.
-* rror is a cool ass function pointer array...
+* The ```arg_chk``` function isn't pretty but it does a lot of checking for 24 lines. ¯\_(ツ)_/¯
+* The ```pied_piper``` function creates all the pipes needed for the program to perform at once. I borrowed this idea from another student on github.
+* ```rror``` is a cool ass function pointer array...
 * ```get_fd``` is chooing the correct fds to use, previousy opened with ```pied_piper```.
-* Have fun with bash return codes to understand the ```rr_null``` function.
+* Have fun with bash return codes to understand the ```rr_nulll``` function.
 
 ## New allowed functions
 perror : the perror() function produces a message on standard error describing the last error encountered during a call to a system or library function.
