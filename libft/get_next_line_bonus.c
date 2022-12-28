@@ -54,7 +54,7 @@ void	ft_addbuff(char *buf, t_stash **stash, int i)
 	while (*buf && (j++ < i))
 		*p1++ = *buf++;
 	*p1 = '\0';
-	if (*stash == NULL)
+	if (!*stash)
 	{
 		*stash = new;
 		return ;
@@ -129,7 +129,7 @@ char	*get_next_line(int fd, char *lim)
 	if (line_chk2(line, lim))
 		return (limited(stash, line, fd));
 	ft_recover(&stash[fd]);
-	if (line[0] == '\0')
+	if (!*line)
 	{
 		ft_unleash(stash[fd]);
 		stash[fd] = NULL;
