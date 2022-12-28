@@ -33,12 +33,6 @@ typedef struct s_cmd
 	struct s_cmd	*next;
 }	t_cmd;
 
-typedef struct s_data
-{
-	char			*tmp;
-	struct s_data	*next;
-}	t_data;
-
 typedef struct s_core
 {
 	char	**argv;
@@ -100,6 +94,5 @@ size_t	line_chk(char *a, char *b);
 char	*pathfindr(t_core *board, char *cmd);
 
 t_cmd	*ft_lstlastc(t_cmd *lst);
-t_data	*ft_lstlastd(t_data *lst);
 
 #endif
