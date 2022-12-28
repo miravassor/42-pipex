@@ -44,17 +44,6 @@ t_cmd	*ft_lstlastc(t_cmd *lst)
 	return (lst);
 }
 
-t_data	*ft_lstlastd(t_data *lst)
-{
-	while (lst)
-	{
-		if (!lst->next)
-			return (lst);
-		lst = lst->next;
-	}
-	return (lst);
-}
-
 size_t	line_chk(char *a, char *b)
 {
 	char	*p1;
