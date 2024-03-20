@@ -2,11 +2,11 @@
 *2022 - grade : 125/100*
 
 The goal of this project is to implement bash pipes:
-`./pipex file1 cmd1 cmd2 file2` behave like `< file1 cmd1 | cmd2 > file2`
+- `./pipex file1 cmd1 cmd2 file2` behave like: `< file1 cmd1 | cmd2 > file2`
 Mutiple pipes: 
-`$> ./pipex file1 cmd1 cmd2 cmd3 ... cmdn file2` behave like `< file1 cmd1 | cmd2 | cmd3 ... | cmdn > file2`
+- `./pipex file1 cmd1 cmd2 cmd3 ... cmdn file2` behave like: `< file1 cmd1 | cmd2 | cmd3 ... | cmdn > file2`
 here_doc:
-`./pipex here_doc LIMITER cmd cmd1 file` behave like `cmd << LIMITER | cmd1 >> file`
+- `./pipex here_doc LIMITER cmd cmd1 file` behave like: `cmd << LIMITER | cmd1 >> file`
 
 ## Tips
 * use `bash -posix` command to enter the expected bash version you must mirror.
@@ -60,6 +60,3 @@ unlink : unlink - call the unlink function to remove the specified file
 wait : await process completion
 
 waitpid : All of these system calls are used to wait for state changes in a child of the calling process, and obtain information about the child whose state has changed.
-
------------------
-Good luck !
