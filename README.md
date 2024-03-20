@@ -1,11 +1,11 @@
 # 42 pipex
 *2022 - grade : 125/100*
 
-The goal of this project is to implement bash pipes:
+* The goal of this project is to implement bash pipes:
 - `./pipex file1 cmd1 cmd2 file2` behave like: `< file1 cmd1 | cmd2 > file2`
-Mutiple pipes: 
+* Mutiple pipes: 
 - `./pipex file1 cmd1 cmd2 cmd3 ... cmdn file2` behave like: `< file1 cmd1 | cmd2 | cmd3 ... | cmdn > file2`
-here_doc:
+* here_doc:
 - `./pipex here_doc LIMITER cmd cmd1 file` behave like: `cmd << LIMITER | cmd1 >> file`
 
 ## Tips
