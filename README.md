@@ -1,6 +1,13 @@
 # 42 pipex
 *2022 - grade : 125/100*
 
+The goal of this project is to implement bash pipes:
+`./pipex file1 cmd1 cmd2 file2` behave like `< file1 cmd1 | cmd2 > file2`
+Mutiple pipes: 
+`$> ./pipex file1 cmd1 cmd2 cmd3 ... cmdn file2` behave like `< file1 cmd1 | cmd2 | cmd3 ... | cmdn > file2`
+here_doc:
+`./pipex here_doc LIMITER cmd cmd1 file` behave like `cmd << LIMITER | cmd1 >> file`
+
 ## Tips
 * use `bash -posix` command to enter the expected bash version you must mirror.
 * [great stackoverflow post](https://stackoverflow.com/a/30714995) on dup2 and close functions.
@@ -8,10 +15,8 @@
 * the `echo$?` command gives you the last returned code from your last command, handy to test and understand bash return codes (not mandatory).
 
 ## Code
-* This code isn't the shortest or most optimized code I've seen for this project but it's what I've come up with. Make your own and see how it can be improved. ```:)```
-* The ```arg_chk``` function isn't pretty but it does a lot of checking/initializing for 24 lines. ```¯\_(ツ)_/¯```
-* The ```pied_piper``` function creates all the pipes needed for the program to perform at once. I borrowed this idea from another student on github.
-* ```rror``` is a cool ass function pointer array...
+* The ```pied_piper``` function creates all the pipes needed for the program to perform at once.
+* ```rror``` is a cool function pointer array ;)
 * ```get_fd``` is choosing the correct fds to use, previousy opened with ```pied_piper```.
 * Have fun with bash return codes to understand the ```rr_nulll``` function.
 * Bonus : I upgraded the function ```get_next_line``` to take the string limiter in addition of the fd it reads from. This way everything can be cleaned properly when the limiter is read.
